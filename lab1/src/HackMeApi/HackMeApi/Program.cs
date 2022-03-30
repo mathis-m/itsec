@@ -2,6 +2,13 @@ using HackMeApi.Infrastructure;
 using HackMeApi.Services;
 using Microsoft.AspNetCore.Authentication.Cookies;
 using Microsoft.AspNetCore.SpaServices.ReactDevelopmentServer;
+using Microsoft.EntityFrameworkCore;
+
+#if DEBUG
+var uiPath = "../../ui";
+#else
+var uiPath = "ui";
+#endif
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -28,7 +35,7 @@ builder.Services.AddCors(options =>
 });
 
 builder.Services
-    .AddSpaStaticFiles(config => { config.RootPath = "../../ui/build"; });
+    .AddSpaStaticFiles(config => { config.RootPath = uiPath; });
 
 
 builder.Services.AddAuthentication(CookieAuthenticationDefaults.AuthenticationScheme)
@@ -46,15 +53,15 @@ builder.Services.AddAuthentication(CookieAuthenticationDefaults.AuthenticationSc
 
 var app = builder.Build();
 
-// Configure the HTTP request pipeline.
-if (app.Environment.IsDevelopment())
+if(app.Environment.IsDevelopment())
 {
     app.UseSwagger();
     app.UseSwaggerUI();
 }
-app.UseHttpsRedirection();
-app.UseCors("ClientPermission");
+if(app.Environment.IsProduction())
+    app.UseHttpsRedirection();
 
+app.UseCors("ClientPermission");
 
 
 app.UseSpaStaticFiles();
@@ -72,14 +79,40 @@ app.UseEndpoints(endpoints =>
 });
 
 
+
 app.UseSpa(spa =>
 {
-    spa.Options.SourcePath = "../../ui";
-
-    if (app.Environment.IsDevelopment())
-    {
-        spa.UseReactDevelopmentServer(npmScript: "start");
-    }
+    spa.Options.SourcePath = uiPath;
+#if DEBUG
+    spa.UseReactDevelopmentServer(npmScript: "start");
+#endif
 });
+
+using (var scope = app.Services.CreateScope())
+{
+    var logger = scope.ServiceProvider.GetRequiredService<ILogger<Program>>();
+    for (var i = 0; i < 10; i++)
+    {
+        logger.LogInformation("Try connect to database...");
+        try
+        {
+            var db = scope.ServiceProvider.GetRequiredService<HackMeContext>();
+            db.Database.Migrate();
+            break;
+        }
+        catch
+        {
+            logger.LogWarning("Error while db setup, retry in 2s");
+            if (i == 9)
+            {
+                throw;
+            }
+
+            await Task.Delay(TimeSpan.FromSeconds(2));
+        }
+    }
+}
+
+
 
 app.Run();

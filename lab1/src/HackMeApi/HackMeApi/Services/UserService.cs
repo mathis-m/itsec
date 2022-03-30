@@ -12,9 +12,9 @@ namespace HackMeApi.Services
         {
             _context = context;
         }
-        public User? GetUserFromLogin(string userName, string password)
+        public AppUser? GetUserFromLogin(string userName, string password)
         {
-            var user = _context.Users.SingleOrDefault(user => user.UserName == userName);
+            var user = _context.AppUser.SingleOrDefault(user => user.UserName == userName);
             if (user is null)
                 return null;
 
@@ -39,9 +39,9 @@ namespace HackMeApi.Services
             return user;
         }
 
-        public async Task<User> RegisterUser(string userName, string password)
+        public async Task<AppUser> RegisterUser(string userName, string password)
         {
-            var user = await _context.Users.AddAsync(new User
+            var user = await _context.AppUser.AddAsync(new AppUser
             {
                 UserName = userName,
                 Password = password
@@ -54,10 +54,10 @@ namespace HackMeApi.Services
 
         public async Task DeleteUser(string userName)
         {
-            var user = await _context.Users.SingleOrDefaultAsync(x => x.UserName == userName);
+            var user = await _context.AppUser.SingleOrDefaultAsync(x => x.UserName == userName);
             if (user is null)
                 throw new InvalidOperationException("User does not exist");
-            _context.Users.Remove(user);
+            _context.AppUser.Remove(user);
             await _context.SaveChangesAsync();
         }
     }

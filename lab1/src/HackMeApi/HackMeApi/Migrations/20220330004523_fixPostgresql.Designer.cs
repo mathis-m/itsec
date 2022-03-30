@@ -3,6 +3,7 @@ using System;
 using HackMeApi.Infrastructure;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using Npgsql.EntityFrameworkCore.PostgreSQL.Metadata;
 
@@ -11,9 +12,10 @@ using Npgsql.EntityFrameworkCore.PostgreSQL.Metadata;
 namespace HackMeApi.Migrations
 {
     [DbContext(typeof(HackMeContext))]
-    partial class HackMeContextModelSnapshot : ModelSnapshot
+    [Migration("20220330004523_fixPostgresql")]
+    partial class fixPostgresql
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder

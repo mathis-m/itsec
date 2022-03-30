@@ -20,7 +20,7 @@ namespace HackMeApi.Services
 
         public async Task CreatePostFor(string userName, string content, string createdAt)
         {
-            var user = await _context.Users.SingleOrDefaultAsync(u => u.UserName == userName);
+            var user = await _context.AppUser.SingleOrDefaultAsync(u => u.UserName == userName);
             if (user is null)
                 throw new ArgumentException("Username not known to the system", nameof(userName));
 
@@ -40,7 +40,9 @@ namespace HackMeApi.Services
             // A1:2017-Injection
             // fix don't use ExecuteSqlRawAsync instead use ExecuteSqlInterpolated(DatabaseFacade, FormattableString) or use Ef to generate sql
 
-            var sql = $"UPDATE {tableName} SET Content='{sanitizedContent}', CreatedAt='{createdAt}' WHERE Id={post.Entity.Id};";
+            var sql = _context.IsSqlLite 
+                ? $"UPDATE {tableName} SET Content='{sanitizedContent}', CreatedAt='{createdAt}' WHERE Id={post.Entity.Id};"
+                : $"UPDATE public.\"{tableName}\" SET \"Content\"='{sanitizedContent}', \"CreatedAt\"='{createdAt}' WHERE \"Id\"={post.Entity.Id};";
             await _context.Database.ExecuteSqlRawAsync(sql);
             await _context.SaveChangesAsync();
             var post1 = _context.Posts.SingleOrDefault(p => p.Id == post.Entity.Id);

@@ -7,5 +7,5 @@ public class Post
     public DateTime CreatedAt { get; set; }
 
     public int AuthorId { get; set; }
-    public User Author { get; set; }
+    public AppUser Author { get; set; }
 }

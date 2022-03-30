@@ -1,28 +1,48 @@
-﻿using HackMeApi.Infrastructure.Entities;
+﻿using System.Reflection;
+using HackMeApi.Infrastructure.Entities;
 using Microsoft.EntityFrameworkCore;
 
 namespace HackMeApi.Infrastructure
 {
     public class HackMeContext: DbContext
     {
+        public readonly bool IsSqlLite;
         public DbSet<Post> Posts { get; set; }
-        public DbSet<User> Users { get; set; }
+        public DbSet<AppUser> AppUser { get; set; }
 
-        public string DbPath { get; }
+        public string ConnectionString { get; }
 
-        public HackMeContext()
+        public HackMeContext(IConfiguration configuration)
         {
-            var folder = Environment.SpecialFolder.LocalApplicationData;
-            var path = Environment.GetFolderPath(folder);
-            DbPath = System.IO.Path.Join(path, "hackMe.db");
+            var connStr = configuration.GetValue<string>("SqlConnection");
+            if (connStr == null)
+            {
+                const Environment.SpecialFolder folder = Environment.SpecialFolder.LocalApplicationData;
+                var path = Environment.GetFolderPath(folder);
+                ConnectionString = $"Data Source={Path.Join(path, "hackMe.db")}";
+                IsSqlLite = true;
+            }
+            else
+            {
+                IsSqlLite = false;
+                ConnectionString = connStr;
+            }
         }
 
         protected override void OnConfiguring(DbContextOptionsBuilder options)
-            => options.UseSqlite($"Data Source={DbPath}");
+        {
+            if (IsSqlLite)
+                options.UseSqlite(ConnectionString);
+            else
+                options.UseNpgsql(ConnectionString);
+
+        }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
-            modelBuilder.Entity<User>()
+            if(IsSqlLite)
+                modelBuilder.UseSerialColumns();
+            modelBuilder.Entity<AppUser>()
                 .HasIndex(u => u.UserName)
                 .IsUnique();
             base.OnModelCreating(modelBuilder);
