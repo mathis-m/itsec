@@ -48,12 +48,12 @@ const PostList = () => {
                 by robert & mathis
             </Typography>
             {error}
-            <Stack spacing={2} sx={{height: "100%", overflowY: "auto"}}>
+            <Stack spacing={2} sx={{height: "100%", overflowY: "auto", padding: "5px"}}>
                 <PostCreate key="creator"/>
                 {
                     posts.map(p => (
                         <Card  key={p.id} sx={{overflow: "unset"}}>
-                            <CardContent sx={{display: "flex", flexDirection: "column"}}>
+                            <CardContent sx={{display: "flex", flexDirection: "column", wordWrap: "break-word"}}>
                                 <Typography sx={{ fontSize: 14 }} color="text.secondary" gutterBottom>
                                     {formatDate(p.createdAt)}
                                 </Typography>
