@@ -42,7 +42,7 @@ namespace HackMeApi.Services
 
             var sql = _context.IsSqlLite 
                 ? $"UPDATE {tableName} SET Content='{sanitizedContent}', CreatedAt='{createdAt}' WHERE Id={post.Entity.Id};"
-                : $"UPDATE public.\"{tableName}\" SET \"Content\"='{sanitizedContent}', \"CreatedAt\"='{createdAt}' WHERE \"Id\"={post.Entity.Id};";
+                : $"UPDATE public.\"{tableName}\" SET \"Content\"='{sanitizedContent}', \"CreatedAt\"='{createdAt}' WHERE public.\"{tableName}\".\"Id\"={post.Entity.Id};";
             await _context.Database.ExecuteSqlRawAsync(sql);
             await _context.SaveChangesAsync();
             var post1 = _context.Posts.SingleOrDefault(p => p.Id == post.Entity.Id);
