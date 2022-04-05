@@ -1,4 +1,6 @@
-﻿using HackMeApi.Infrastructure;
+﻿using System.Security.Cryptography;
+using System.Text;
+using HackMeApi.Infrastructure;
 using HackMeApi.Infrastructure.Entities;
 using Microsoft.EntityFrameworkCore;
 
@@ -18,25 +20,16 @@ namespace HackMeApi.Services
             if (user is null)
                 return null;
 
-            var dbPwdChars = user.Password.ToCharArray();
-
-            var inputPwChars = password.ToCharArray();
-
             // A2:2017-Broken Authentication
             // Implemented Authentication incorrectly
             // fix: if(password != user.Password) return false; else return user;
             // even better use SHA256 to store not clear password :)
-            for (var i = 0; i < inputPwChars.Length; i++)
-            {
-                var pwChar = inputPwChars[i];
-                
-                if (i >= dbPwdChars.Length) 
-                    return null;
-                if (pwChar != dbPwdChars[i])
-                    return null;
-            }
+            // fixed by Robert & Mathis
 
-            return user;
+            var hashedPwd = CalculateSHA256(password);
+            return hashedPwd != user.Password 
+                ? null 
+                : user;
         }
 
         public async Task<AppUser> RegisterUser(string userName, string password)
@@ -44,12 +37,21 @@ namespace HackMeApi.Services
             var user = await _context.AppUser.AddAsync(new AppUser
             {
                 UserName = userName,
-                Password = password
+                Password = CalculateSHA256(password)
             });
 
             await _context.SaveChangesAsync();
 
             return user.Entity;
+        }
+
+        private string CalculateSHA256(string str)
+        {
+            var sha256 = SHA256.Create();
+            var objUtf8 = new UTF8Encoding();
+            var hashValue = sha256.ComputeHash(objUtf8.GetBytes(str));
+
+            return objUtf8.GetString(hashValue);
         }
 
         public async Task DeleteUser(string userName)

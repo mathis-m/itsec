@@ -26,27 +26,18 @@ namespace HackMeApi.Services
 
             var sanitizedContent = _sanitizer.Sanitize(content);
 
-            var post = await _context.Posts.AddAsync(new Post
-            {
-                Author = user
-            });
-
-            await _context.SaveChangesAsync();
-
-            var entityType = _context.Model.FindEntityType(typeof(Post));
-            var tableName = entityType!.GetTableName();
-
             // do some sketchy sql injection stuff
             // A1:2017-Injection
             // fix don't use ExecuteSqlRawAsync instead use ExecuteSqlInterpolated(DatabaseFacade, FormattableString) or use Ef to generate sql
+            // fixed by Robert & Mathis
+            _ = await _context.Posts.AddAsync(new Post
+            {
+                Author = user,
+                CreatedAt = DateTime.Parse(createdAt, null, System.Globalization.DateTimeStyles.RoundtripKind),
+                Content = sanitizedContent
+            });
 
-            var sql = _context.IsSqlLite 
-                ? $"UPDATE {tableName} SET Content='{sanitizedContent}', CreatedAt='{createdAt}' WHERE Id={post.Entity.Id};"
-                : $"UPDATE public.\"{tableName}\" SET \"Content\"='{sanitizedContent}', \"CreatedAt\"='{createdAt}' WHERE public.\"{tableName}\".\"Id\"={post.Entity.Id};";
-            await _context.Database.ExecuteSqlRawAsync(sql);
             await _context.SaveChangesAsync();
-            var post1 = _context.Posts.SingleOrDefault(p => p.Id == post.Entity.Id);
-            _logger.LogInformation(post1.Content);
         }
 
         public async Task<List<Post>> GetAllPostsWithAuthor()

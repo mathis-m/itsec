@@ -1,4 +1,5 @@
 ﻿using System.ComponentModel.DataAnnotations;
+using Ganss.XSS;
 using HackMeApi.DTOs;
 using HackMeApi.Services;
 using Microsoft.AspNetCore.Authorization;
@@ -12,11 +13,13 @@ namespace HackMeApi.Controllers
     {
         private readonly ILogger<PostsController> _logger;
         private readonly PostService _postService;
+        private readonly HtmlSanitizer _sanitizer;
 
         public PostsController(ILogger<PostsController> logger, PostService postService)
         {
             _logger = logger;
             _postService = postService;
+            _sanitizer = new HtmlSanitizer();
         }
 
         [HttpGet]
@@ -25,13 +28,14 @@ namespace HackMeApi.Controllers
         {
             var posts = await _postService.GetAllPostsWithAuthor();
 
+            // fix by Robert & Mathis
             return posts.Select(p => new PostResponseDto
             {
                 Id = p.Id,
                 AuthorId = p.AuthorId,
-                Author = p.Author.UserName,
+                Author = _sanitizer.Sanitize(p.Author.UserName),
                 CreatedAt = p.CreatedAt,
-                Content = p.Content!,
+                Content = _sanitizer.Sanitize(p.Content!),
             }).ToList();
         }
 
