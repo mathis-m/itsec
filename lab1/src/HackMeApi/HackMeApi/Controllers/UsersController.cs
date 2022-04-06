@@ -95,8 +95,8 @@ namespace HackMeApi.Controllers
 
         // A5:2017-Broken Access Control
         // should use RBAC to prevent that all users can delete other users.
-        // fix: [Authorize(Roles = "Administrator")]
-
+        // fix: [Authorize(Roles = "Administrator")] by Robert & Mathis
+        [Authorize(Roles = "Administrator")]
         [Authorize]
         [HttpDelete("/{userName}")]
         public async Task DeleteUser(string userName)
