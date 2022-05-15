@@ -20,19 +20,23 @@ void loose()
 
 int calculate(char *text, int input1, int input2, int input3, int number1, int number2, int number3)
 {
-
     char name[16];
-    strcpy(name, text);
 
-    if (number1 == input1 && number2 == input2 && number3 == input3)
-        return 0;
-    else
-        return 1;
+    if (strlen(text) >= sizeof name)
+    {
+        return 2;
+    } 
+    else {
+        strcpy(name, text);
+        if (number1 == input1 && number2 == input2 && number3 == input3)
+            return 0;
+        else
+            return 1;
+    }
 }
 
 int main(int argc, char **argv)
 {
-
     int number1, number2, number3;
     int input1 = 0, input2 = 0, input3 = 0;
 
@@ -55,9 +59,15 @@ int main(int argc, char **argv)
         number1 = rand() % 10;
         number2 = rand() % 10;
         number3 = rand() % 10;
-
-        if (calculate(argv[1], input1, input2, input3, number1, number2, number3) == 0)
+        int res = calculate(argv[1], input1, input2, input3, number1, number2, number3);
+        if (res == 0)
             win();
+        else if(res == 2)
+        {
+            printf("Do not try to attempt a Buffer Overlow!\n");
+            exit(0);
+            return 0;
+        }
         else
         {
             loose();
