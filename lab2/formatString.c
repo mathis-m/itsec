@@ -2,7 +2,6 @@
 #include <stdlib.h>
 #include <time.h>
 
-
 int main() {
 
     srand (time(NULL));
@@ -20,7 +19,9 @@ int main() {
     fgets(lastName, sizeof(lastName), stdin);
 
     printf("Your name is:");
-    printf(lastName);
+    
+    // Mathis & Robert
+    printf("%s", &lastName);
     printf("\n");
 
 
