@@ -1,0 +1,54 @@
+############
+Seed: 200
+Rate: 1
+Payload:
+lvsu3w9Ni
+Cmd:
+u ����Q���Y
+Cmd base64:
+dQAgAAwA/f/9//3//f9RAP3//f/9/1kA
+############
+Seed: 407
+Rate: 1
+Payload:
+lvsu3w9Ni
+Cmd:
+u ���Y�h����
+Cmd base64:
+dQAgAP3//f/9/1kA/f9oAP3//f/9//3/
+############
+Seed: 612
+Rate: 1
+Payload:
+lvsu3w9Ni
+Cmd:
+u ����e���
+Cmd base64:
+dQAgAP3//f/9//3/CABlAP3/BAD9//3/
+############
+Seed: 828
+Rate: 0.6
+Payload:
+jLTqiKtr
+Cmd:
+u ������p��
+Cmd base64:
+dQAgAP3//f/9//3//f/9/3AA/f/9/w==
+############
+Seed: 828
+Rate: 0.6
+Payload:
+lvsu3w9Ni
+Cmd:
+u ������=��H
+Cmd base64:
+dQAgAP3//f/9//3//f/9/z0A/f/9/0gA
+############
+Seed: 35
+Rate: 0.8
+Payload:
+lvsu3w9Ni
+Cmd:
+u ������9�ӂ
+Cmd base64:
+dQAgAP3//f/9//3//f/9/zkA/f/CBA==

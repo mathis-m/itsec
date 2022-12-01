@@ -1,0 +1,16 @@
+C:\src\itsec\lab4\FrequencyAnalysis\FrequencyAnalysis\bin\Debug\net5.0\FrequencyAnalysis.exe
+C:\src\itsec\lab4\FrequencyAnalysis\FrequencyAnalysis\bin\Debug\net5.0\FrequencyAnalysis.deps.json
+C:\src\itsec\lab4\FrequencyAnalysis\FrequencyAnalysis\bin\Debug\net5.0\FrequencyAnalysis.runtimeconfig.json
+C:\src\itsec\lab4\FrequencyAnalysis\FrequencyAnalysis\bin\Debug\net5.0\FrequencyAnalysis.runtimeconfig.dev.json
+C:\src\itsec\lab4\FrequencyAnalysis\FrequencyAnalysis\bin\Debug\net5.0\FrequencyAnalysis.dll
+C:\src\itsec\lab4\FrequencyAnalysis\FrequencyAnalysis\bin\Debug\net5.0\ref\FrequencyAnalysis.dll
+C:\src\itsec\lab4\FrequencyAnalysis\FrequencyAnalysis\bin\Debug\net5.0\FrequencyAnalysis.pdb
+C:\src\itsec\lab4\FrequencyAnalysis\FrequencyAnalysis\obj\Debug\net5.0\FrequencyAnalysis.csprojAssemblyReference.cache
+C:\src\itsec\lab4\FrequencyAnalysis\FrequencyAnalysis\obj\Debug\net5.0\FrequencyAnalysis.GeneratedMSBuildEditorConfig.editorconfig
+C:\src\itsec\lab4\FrequencyAnalysis\FrequencyAnalysis\obj\Debug\net5.0\FrequencyAnalysis.AssemblyInfoInputs.cache
+C:\src\itsec\lab4\FrequencyAnalysis\FrequencyAnalysis\obj\Debug\net5.0\FrequencyAnalysis.AssemblyInfo.cs
+C:\src\itsec\lab4\FrequencyAnalysis\FrequencyAnalysis\obj\Debug\net5.0\FrequencyAnalysis.csproj.CoreCompileInputs.cache
+C:\src\itsec\lab4\FrequencyAnalysis\FrequencyAnalysis\obj\Debug\net5.0\FrequencyAnalysis.dll
+C:\src\itsec\lab4\FrequencyAnalysis\FrequencyAnalysis\obj\Debug\net5.0\ref\FrequencyAnalysis.dll
+C:\src\itsec\lab4\FrequencyAnalysis\FrequencyAnalysis\obj\Debug\net5.0\FrequencyAnalysis.pdb
+C:\src\itsec\lab4\FrequencyAnalysis\FrequencyAnalysis\obj\Debug\net5.0\FrequencyAnalysis.genruntimeconfig.cache

@@ -1,0 +1,22 @@
+Execute at 0523_1958
+############
+Seed: 800
+Rate: 0
+Payload:
+9ZCno5
+Cmd:
+h
+############
+Seed: 800
+Rate: 0.2
+Payload:
+9ZCno5
+Cmd:
+h
+############
+Seed: 800
+Rate: 0.4
+Payload:
+9ZCno5
+Cmd:
+h

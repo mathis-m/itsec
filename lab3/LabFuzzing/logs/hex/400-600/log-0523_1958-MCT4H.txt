@@ -1,0 +1,57 @@
+Execute at 0523_1958
+############
+Seed: 400
+Rate: 0
+Payload:
+MCT4H
+Cmd:
+h
+############
+Seed: 400
+Rate: 0.2
+Payload:
+MCT4H
+Cmd:
+h
+############
+Seed: 400
+Rate: 0.4
+Payload:
+MCT4H
+Cmd:
+h
+############
+Seed: 400
+Rate: 0.6
+Payload:
+MCT4H
+Cmd:
+h
+############
+Seed: 400
+Rate: 0.8
+Payload:
+MCT4H
+Cmd:
+h
+############
+Seed: 400
+Rate: 1
+Payload:
+MCT4H
+Cmd:
+h
+############
+Seed: 401
+Rate: 0
+Payload:
+MCT4H
+Cmd:
+h
+############
+Seed: 401
+Rate: 0.2
+Payload:
+MCT4H
+Cmd:
+h

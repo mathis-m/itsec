@@ -1,0 +1,16 @@
+ This is a Text Utitlity Programm - you can enter a command from stdin.
+
+ Input		| Output
+ ----------------------------------------------------------------------------
+ h string	| Hex Value of the input String.
+ u string	| Convert the input string to Uppercase
+ l string	| Convert the string to lowercase
+ v string	| Shows the percentage of vowels in the string
+ p char string	| Calculate percentage of the specified char in the text
+ o n string	| Shift your strings by n, only works for lowercase
+ b size string	| Format the string into blocks using the mentioned Blocksize
+ dp pos string	| Delete character at specified position
+ -h n string	| Show only the first n characters of the string
+
+ Enter your command:  The result after deleting the characters at position 2 is: abd
+

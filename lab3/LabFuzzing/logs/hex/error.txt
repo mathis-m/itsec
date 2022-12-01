@@ -1,0 +1,225 @@
+############
+Seed: 0
+Rate: 0.6
+Payload:
+MCT4H
+Cmd:
+h �	�qi�
+Cmd base64:
+aAAgAP3/CQD9/3EAaQD9/w==
+############
+Seed: 800
+Rate: 0.2
+Payload:
+oqTGxuHR
+Cmd:
+h oU�A|U��
+Cmd base64:
+aAAgAG8AVQD9/0EAfABVAP3/GgD9/w==
+############
+Seed: 200
+Rate: 0.6
+Payload:
+9ZCno5
+Cmd:
+h �Y�X��
+Cmd base64:
+aAAgAP3/WQD9/1gA/f/9/xQA
+############
+Seed: 600
+Rate: 0.6
+Payload:
+9ZCno5
+Cmd:
+h ���#=c
+Cmd base64:
+aAAgAP3//f/9/yMAPQASAGMA
+############
+Seed: 400
+Rate: 0.4
+Payload:
+AYxWSCE
+Cmd:
+h �	\�U
+Cmd base64:
+aAAgAP3/CQAUAH8AXAD9/1UAGgA=
+############
+Seed: 0
+Rate: 0.2
+Payload:
+oqTGxuHR
+Cmd:
+h �aPFxuX��
+Cmd base64:
+aAAgAP3/YQBQAEYAeAB1AFgA/f/9/w==
+############
+Seed: 200
+Rate: 0.8
+Payload:
+MCT4H
+Cmd:
+h ����H
+Cmd base64:
+aAAgAP3//f/9//3/SAA=
+############
+Seed: 0
+Rate: 0.6
+Payload:
+9ZCno5
+Cmd:
+h ��+N�
+Cmd base64:
+aAAgAP3/EAD9/ysATgD9/w==
+############
+Seed: 0
+Rate: 0.2
+Payload:
+EOwk2XRsz
+Cmd:
+h �_sj2XB��
+Cmd base64:
+aAAgAP3/XwBzAGoAMgBYAEIA/f/9/xIA
+############
+Seed: 200
+Rate: 0.6
+Payload:
+AYxWSCE
+Cmd:
+h �Z�a˔[
+Cmd base64:
+aAAgAP3/WgD9/2EA1AJbABMA
+############
+Seed: 800
+Rate: 0.2
+Payload:
+AYxWSCE
+Cmd:
+h A}�QWc�B
+Cmd base64:
+aAAgAEEAfQD9/1EAVwBjAP3/QgA=
+############
+Seed: 200
+Rate: 0.6
+Payload:
+EOwk2XRsz
+Cmd:
+h �L�]��Lj�
+Cmd base64:
+aAAgAP3/TAD9/10A/f/9/0wAagD9/w==
+############
+Seed: 400
+Rate: 0.4
+Payload:
+oqTGxuHR
+Cmd:
+h �!8ow�XB�
+Cmd base64:
+aAAgAP3/IQA4AG8AdwD9/1gAQgD9/w==
+############
+Seed: 0
+Rate: 0.6
+Payload:
+AYxWSCE
+Cmd:
+h ��rҗ@
+Cmd base64:
+aAAgAP3/EwD9/xIAcgCXBEAA
+############
+Seed: 600
+Rate: 0.4
+Payload:
+oqTGxuHR
+Cmd:
+h iqR�pprB�
+Cmd base64:
+aAAgAGkAcQBSAP3/cABwAHIAQgD9/w==
+############
+Seed: 600
+Rate: 0.6
+Payload:
+AYxWSCE
+Cmd:
+h ��d,�
+Cmd base64:
+aAAgAP3//f8aAAEAZAAsAP3/
+############
+Seed: 800
+Rate: 0.2
+Payload:
+EOwk2XRsz
+Cmd:
+h Ek�m6x�;�K
+Cmd base64:
+aAAgAEUAawD9/20ANgB4AP3/OwD9/0sA
+############
+Seed: 200
+Rate: 0.6
+Payload:
+oqTGxuHR
+Cmd:
+h �r�q�VK
+Cmd base64:
+aAAgAP3/cgD9/3EA/f9WAEsA
+############
+Seed: 800
+Rate: 0.6
+Payload:
+9ZCno5
+Cmd:
+h k���9 
+Cmd base64:
+aAAgAGsA/f/9//3/OQAgAA4A
+############
+Seed: 600
+Rate: 0.6
+Payload:
+EOwk2XRsz
+Cmd:
+h ��&`;�
+Cmd base64:
+aAAgAP3//f8mAGAAfwA7AP3/
+############
+Seed: 401
+Rate: 0.4
+Payload:
+MCT4H
+Cmd:
+h kC�|��
+Cmd base64:
+aAAgAGsAQwD9/3wA/f/9/w==
+############
+Seed: 401
+Rate: 0.4
+Payload:
+9ZCno5
+Cmd:
+h Z�&��i
+Cmd base64:
+aAAgAB8AWgD9/yYA/f/9/2kA
+############
+Seed: 601
+Rate: 1
+Payload:
+MCT4H
+Cmd:
+h M�Z��,
+Cmd base64:
+aAAgAE0A/f9aAP3//f8sAA==
+############
+Seed: 400
+Rate: 0.4
+Payload:
+EOwk2XRsz
+Cmd:
+h �C=�Bc�
+Cmd base64:
+aAAgAP3/HwAbAEMAPQD9/0IAYwD9/w==
+############
+Seed: 803
+Rate: 0.8
+Payload:
+MCT4H
+Cmd:
+h @*���
+Cmd base64:
+aAAgAEAAKgD9//3//f8LAA==

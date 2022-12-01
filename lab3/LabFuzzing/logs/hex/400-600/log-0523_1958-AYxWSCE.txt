@@ -1,0 +1,15 @@
+Execute at 0523_1958
+############
+Seed: 400
+Rate: 0
+Payload:
+AYxWSCE
+Cmd:
+h
+############
+Seed: 400
+Rate: 0.2
+Payload:
+AYxWSCE
+Cmd:
+h

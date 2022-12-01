@@ -1,0 +1,16 @@
+C:\src\itsec\lab4\EncryptDecrypt\EncryptDecrypt\bin\Debug\net5.0\EncryptDecrypt.exe
+C:\src\itsec\lab4\EncryptDecrypt\EncryptDecrypt\bin\Debug\net5.0\EncryptDecrypt.deps.json
+C:\src\itsec\lab4\EncryptDecrypt\EncryptDecrypt\bin\Debug\net5.0\EncryptDecrypt.runtimeconfig.json
+C:\src\itsec\lab4\EncryptDecrypt\EncryptDecrypt\bin\Debug\net5.0\EncryptDecrypt.runtimeconfig.dev.json
+C:\src\itsec\lab4\EncryptDecrypt\EncryptDecrypt\bin\Debug\net5.0\EncryptDecrypt.dll
+C:\src\itsec\lab4\EncryptDecrypt\EncryptDecrypt\bin\Debug\net5.0\ref\EncryptDecrypt.dll
+C:\src\itsec\lab4\EncryptDecrypt\EncryptDecrypt\bin\Debug\net5.0\EncryptDecrypt.pdb
+C:\src\itsec\lab4\EncryptDecrypt\EncryptDecrypt\obj\Debug\net5.0\EncryptDecrypt.csprojAssemblyReference.cache
+C:\src\itsec\lab4\EncryptDecrypt\EncryptDecrypt\obj\Debug\net5.0\EncryptDecrypt.GeneratedMSBuildEditorConfig.editorconfig
+C:\src\itsec\lab4\EncryptDecrypt\EncryptDecrypt\obj\Debug\net5.0\EncryptDecrypt.AssemblyInfoInputs.cache
+C:\src\itsec\lab4\EncryptDecrypt\EncryptDecrypt\obj\Debug\net5.0\EncryptDecrypt.AssemblyInfo.cs
+C:\src\itsec\lab4\EncryptDecrypt\EncryptDecrypt\obj\Debug\net5.0\EncryptDecrypt.csproj.CoreCompileInputs.cache
+C:\src\itsec\lab4\EncryptDecrypt\EncryptDecrypt\obj\Debug\net5.0\EncryptDecrypt.dll
+C:\src\itsec\lab4\EncryptDecrypt\EncryptDecrypt\obj\Debug\net5.0\ref\EncryptDecrypt.dll
+C:\src\itsec\lab4\EncryptDecrypt\EncryptDecrypt\obj\Debug\net5.0\EncryptDecrypt.pdb
+C:\src\itsec\lab4\EncryptDecrypt\EncryptDecrypt\obj\Debug\net5.0\EncryptDecrypt.genruntimeconfig.cache

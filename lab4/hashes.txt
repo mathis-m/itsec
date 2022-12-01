@@ -1,0 +1,5 @@
+john:$1$kSwpjBFv$VMtu0Mk6p06EUtVw5OLEY/
+jonas:$1$qPEx/5/4$4T0lDrIo5RnrDFH2rP7In/
+pony:$1$q1NwfAWz$5ulIYzhCjsLBsQjQ2CRRN1
+hannah:$1$ia1yKsCX$/Xdet.pCmIR3TdKoavIaP/
+root:$1$E2ST/4kf$6UnJsquPTK3S2lpLxShE/.
